@@ -1,0 +1,148 @@
+* {
+    box-sizing:border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.special{
+  display: none;
+}
+h3{
+  text-transform: uppercase;
+}
+.wrapper{
+  display:flex;
+  justify-content: space-around;
+}
+.sidebar {  
+  width: 30%;
+  background-color: #15046b;
+  color: #e0ddf0;
+}
+.sidebar:nth-child(n){
+  text-align: center;
+}
+.sidebar li{
+  list-style-type: none; 
+}
+
+/* Container for skill bars */
+.container1 {
+  width: 90%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.english {width: 60%; background-color: #dbb427;} 
+.kazakh {width: 100%; background-color: #dbb427;} 
+.russian {width: 100%; background-color: #dbb427;} 
+.korean {width: 20%; background-color: #dbb427;} 
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+.svg-icon path{
+  fill: #e0ddf0;
+}
+
+.timeline {
+	max-width:800px;
+	height: 20px;
+	list-style: none;
+	text-align: justify;
+	margin: 120px auto;
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(45%, rgba(255,255,255,0)), color-stop(51%, rgba(191,128,11,1)), color-stop(57%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,0)));
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 45%, rgba(191,128,11,1) 51%, rgba(255,255,255,0) 57%, rgba(255,255,255,0) 100%);
+}
+.timeline:after {
+  display: inline-block;
+  content: "";
+  width: 100%;
+}
+.timeline li {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: #15046b;
+	text-align: center;
+	line-height: 1.2;
+	position: relative;
+	border-radius: 50%;
+}
+.timeline li:before {
+	display: inline-block;
+	content: attr(data-year);
+	font-size: 26px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.timeline li:nth-child(odd):before {
+	top: -40px;
+}
+.timeline li:nth-child(even):before {
+	bottom: -40px;
+}
+.timeline li:after {
+	display: inline-block;
+  width: 250px;
+	content: attr(data-text);
+	font-size: 16px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.timeline li:nth-child(odd):after {
+	bottom: 0;
+	margin-bottom: -10px;
+	transform: translate(-50%, 100%);
+}
+.timeline li:nth-child(even):after {
+	top: 0;
+	margin-top: -10px;
+	transform: translate(-50%, -100%);
+}
+
+.main-info{
+  width: 65%;
+}
+
+.my-skills{
+  display: flex;
+}
+.my-skills li,
+.projects li,
+.special li{
+  list-style: none;
+}
+.my-skills li::before,
+.projects li::before,
+.special li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #15046b; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+@media screen and (max-width: 1400px) {
+  .timeline{
+    display: none;
+  }
+  .special {
+    display: block;
+  }
+}
+
+
+
+
+
+
