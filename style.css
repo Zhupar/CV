@@ -13,6 +13,11 @@ h3{
   display:flex;
   justify-content: space-around;
 }
+.responsive {
+  width: 100%;
+  max-width: 130px;
+  height: auto;
+}
 .sidebar {  
   width: 30%;
   background-color: #15046b;
@@ -21,8 +26,12 @@ h3{
 .sidebar:nth-child(n){
   text-align: center;
 }
+.sidebar ul{
+  padding: 0 30px;
+}
 .sidebar li{
-  list-style-type: none; 
+  list-style-type: none;
+  overflow-wrap: break-word;
 }
 
 /* Container for skill bars */
@@ -140,6 +149,12 @@ h3{
     display: block;
   }
 }
+@media (max-width: 500px) {
+    .wrapper{flex-direction: column;}
+    .sidebar {width: 100%;}
+    .main-info{margin: 0 auto;}
+}
+
 
 
 
